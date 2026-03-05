@@ -1,0 +1,181 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ================= BACKGROUND ================= */
+.page-container {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+.page-container::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255,0.15), transparent 70%);
+  top: -150px;
+  right: -150px;
+  pointer-events: none;
+}
+
+
+
+/* ================= CARD ================= */
+.page-card {
+  width: 100%;
+  max-width: 750px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 35px;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  animation: fadeUp 0.6s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .page-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.page-card h1 {
+    margin-bottom: 18px
+}
+
+.page-card p {
+    margin-bottom: 22px;
+}
+
+.page-card .link-btn {
+    margin-top: 12px;
+}
+
+/* ================= TYPOGRAPHY ================= */
+h1 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #243b55;
+}
+
+p {
+  font-size: 15px;
+  margin-bottom: 25px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ================= BUTTON ================= */
+.link-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.link-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+@media (min-width: 1024px) {
+  .button-group {
+    gap: 26px;
+  }
+}
+
+/* ================= COUNTDOWN ================= */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.countdown div {
+  background: #243b55;
+  color: white;
+  padding: 18px;
+  border-radius: 14px;
+  min-width: 85px;
+  transition: 0.2s;
+}
+
+.countdown div:hover {
+  transform: scale(1.05);
+}
+
+.countdown span {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.countdown small {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= DESKTOP ENHANCEMENT ================= */
+@media (min-width: 1024px) {
+  .page-card {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 17px;
+  }
+
+  .countdown div {
+    min-width: 120px;
+    padding: 25px;
+  }
+
+  .countdown span {
+    font-size: 32px;
+  }
+}
