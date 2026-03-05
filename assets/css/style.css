@@ -230,6 +230,53 @@ p {
   font-weight: bold;
 }
 
+.progress {
+  stroke-dasharray: 326;
+  stroke-dashoffset: 326;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.progress-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.progress-circle svg {
+  width: 120px;
+  height: 120px;
+  transform: rotate(-90deg);
+}
+
+.progress-circle circle {
+  fill: none;
+  stroke-width: 8;
+  r: 52;
+  cx: 60;
+  cy: 60;
+}
+
+.progress-circle .bg {
+  stroke: rgba(255,255,255,0.2);
+}
+
+.progress-circle .progress {
+  stroke: white;
+  stroke-linecap: round;
+  stroke-dasharray: 326; 
+  stroke-dashoffset: 326;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.progress-circle .label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
 /* ================= ANIMATION ================= */
 @keyframes fadeUp {
   from {
@@ -307,7 +354,20 @@ p {
   }
 
   .maintenance-left {
-    padding: 40px 20px;
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+  }
+  .maintenance-left h1 {
+    font-size: 40px;
+    color: #1e3c72;
+  }
+  .maintenance-left p {
+    color: #555;
+    line-height: 1.7;
   }
 
   .maintenance-right {

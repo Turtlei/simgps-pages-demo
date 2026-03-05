@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Maintenance</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -13,7 +13,10 @@
   <!-- LEFT SIDE -->
   <div class="maintenance-left">
     <h1>Under Construction</h1>
-    <p>We’re improving the system. Stay tuned for updates.</p>
+    <p>
+      We’re improving the system to give you a better experience.
+      Please leave your email below to get notified.
+    </p>
 
     <form class="notify-form">
       <input type="email" placeholder="Enter your email" required>
@@ -23,48 +26,64 @@
 
   <!-- RIGHT SIDE -->
   <div class="maintenance-right">
+
     <div class="circular-countdown">
-      <div class="circle">
-        <span id="m_days">0</span>
-        <small>Days</small>
+
+      <!-- Days -->
+      <div class="progress-circle">
+        <svg>
+          <circle class="bg"></circle>
+          <circle class="progress" id="daysCircle"></circle>
+        </svg>
+        <div class="label">
+          <span id="m_days">0</span>
+          <small>Days</small>
+        </div>
       </div>
-      <div class="circle">
-        <span id="m_hours">0</span>
-        <small>Hours</small>
+
+      <!-- Hours -->
+      <div class="progress-circle">
+        <svg>
+          <circle class="bg"></circle>
+          <circle class="progress" id="hoursCircle"></circle>
+        </svg>
+        <div class="label">
+          <span id="m_hours">0</span>
+          <small>Hours</small>
+        </div>
       </div>
-      <div class="circle">
-        <span id="m_minutes">0</span>
-        <small>Minutes</small>
+
+      <!-- Minutes -->
+      <div class="progress-circle">
+        <svg>
+          <circle class="bg"></circle>
+          <circle class="progress" id="minutesCircle"></circle>
+        </svg>
+        <div class="label">
+          <span id="m_minutes">0</span>
+          <small>Minutes</small>
+        </div>
       </div>
-      <div class="circle">
-        <span id="m_seconds">0</span>
-        <small>Seconds</small>
+
+      <!-- Seconds -->
+      <div class="progress-circle">
+        <svg>
+          <circle class="bg"></circle>
+          <circle class="progress" id="secondsCircle"></circle>
+        </svg>
+        <div class="label">
+          <span id="m_seconds">0</span>
+          <small>Seconds</small>
+        </div>
       </div>
+
     </div>
+
   </div>
 
 </div>
 
-<script>
-  const targetDate = new Date("2026-04-01T00:00:00");
+<script src="../assets/js/script.js"></script>
 
-  function updateMaintenanceCountdown() {
-    const now = new Date();
-    const diff = targetDate - now;
-
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-
-    document.getElementById("m_days").textContent = days;
-    document.getElementById("m_hours").textContent = hours;
-    document.getElementById("m_minutes").textContent = minutes;
-    document.getElementById("m_seconds").textContent = seconds;
-  }
-
-  setInterval(updateMaintenanceCountdown, 1000);
-  updateMaintenanceCountdown();
-</script>
 </body>
 </html>
