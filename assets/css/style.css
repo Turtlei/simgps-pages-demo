@@ -12,14 +12,21 @@ html, body {
 
 /* ================= BACKGROUND ================= */
 .page-container {
-  min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background: linear-gradient(135deg, #141e30, #243b55);
+
+  background: url("https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1600&q=80");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+
 }
 
 .page-container::before {
@@ -33,6 +40,61 @@ html, body {
   pointer-events: none;
 }
 
+.page-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.background-effect {
+  position: absolute;
+  inset: 0;
+  z-index: 0; 
+}
+
+/* ============== COMING SOON ============== */
+.coming-soon .coming-content {
+  position: relative ;
+ z-index: 2;
+ text-align: center;
+ color: white;
+ max-width: 700px;
+}
+
+.coming-soon .coming-content h1,
+.coming-soon .coming-content p {
+  color: white;
+}
+
+.coming-soon .page-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 50px rgba(0,0,0,0.3);
+}
+
+.coming-soon .link-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.coming-soon .link-btn:hover {
+  background: rgba(255, 255, 255, 0.35 );
+  transform: translateY(-3px);
+}
+
+.coming-soon .countdown div {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
 
 
 /* ================= CARD ================= */
@@ -47,6 +109,8 @@ html, body {
   backdrop-filter: blur(10px);
   animation: fadeUp 0.6s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 @media (min-width: 1024px) {
