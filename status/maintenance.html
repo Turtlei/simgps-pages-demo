@@ -8,17 +8,63 @@
 </head>
 <body>
 
-<div class="page-container">
-  <div class="page-card">
-    <h1>Maintenance Mode</h1>
-    <p>
-      We're currently performing scheduled maintenance.
-      Please check back later.
-    </p>
+<div class="maintenance-container">
 
-    <a href="../index.html" class="link-btn">Back Home</a>
+  <!-- LEFT SIDE -->
+  <div class="maintenance-left">
+    <h1>Under Construction</h1>
+    <p>We’re improving the system. Stay tuned for updates.</p>
+
+    <form class="notify-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Notify Me</button>
+    </form>
   </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="maintenance-right">
+    <div class="circular-countdown">
+      <div class="circle">
+        <span id="m_days">0</span>
+        <small>Days</small>
+      </div>
+      <div class="circle">
+        <span id="m_hours">0</span>
+        <small>Hours</small>
+      </div>
+      <div class="circle">
+        <span id="m_minutes">0</span>
+        <small>Minutes</small>
+      </div>
+      <div class="circle">
+        <span id="m_seconds">0</span>
+        <small>Seconds</small>
+      </div>
+    </div>
+  </div>
+
 </div>
 
+<script>
+  const targetDate = new Date("2026-04-01T00:00:00");
+
+  function updateMaintenanceCountdown() {
+    const now = new Date();
+    const diff = targetDate - now;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("m_days").textContent = days;
+    document.getElementById("m_hours").textContent = hours;
+    document.getElementById("m_minutes").textContent = minutes;
+    document.getElementById("m_seconds").textContent = seconds;
+  }
+
+  setInterval(updateMaintenanceCountdown, 1000);
+  updateMaintenanceCountdown();
+</script>
 </body>
 </html>
