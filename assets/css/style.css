@@ -21,7 +21,7 @@ html, body {
 
   background: url("https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1600&q=80");
 
-  background-size: cover;
+  background-size: 110%;
   background-position: center;
   background-repeat: no-repeat;
 

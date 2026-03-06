@@ -82,3 +82,32 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+
+/* ==============================
+   PARALLAX BG
+============================== */
+
+const bg = document.querySelector(".interactive-bg");
+
+if (bg) {
+
+  function moveBackground(x, y) {
+    const moveX = (x / window.innerWidth - 0.5) * 20;
+    const moveY = (y / window.innerHeight - 0.5) * 20;
+
+    bg.style.backgroundPosition =
+      `calc(50% + ${moveX}px) calc(50% + ${moveY}px)`;
+  }
+
+  // Desktop mouse
+  document.addEventListener("mousemove", (e) => {
+    moveBackground(e.clientX, e.clientY);
+  });
+
+  // Mobile touch
+  document.addEventListener("touchmove", (e) => {
+    const touch = e.touches[0];
+    moveBackground(touch.clientX, touch.clientY);
+  });
+
+}
