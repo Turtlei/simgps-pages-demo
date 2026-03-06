@@ -21,7 +21,7 @@ html, body {
 
   background: url("https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1600&q=80");
 
-  background-size: 110%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
@@ -251,13 +251,15 @@ p {
 .progress-circle circle {
   fill: none;
   stroke-width: 8;
-  r: 52;
-  cx: 60;
-  cy: 60;
+  stroke-linecap: round;
+  stroke-dasharray: 326;
+  stroke-dashoffset: 326;
 }
 
 .progress-circle .bg {
   stroke: rgba(255,255,255,0.2);
+  stroke-width: 8;
+  fill: none;
 }
 
 .progress-circle .progress {
@@ -321,6 +323,46 @@ p {
   background-position: center;
 }
 
+/* ================= NOTIFY FORM ================= */
+
+.notify-form {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.notify-form input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.notify-form input:focus {
+  border-color: #243b55;
+  box-shadow: 0 0 0 3px rgba(36, 59, 85, 0.1);
+}
+
+.notify-form button {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.notify-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
 
 
 /* ================= DESKTOP ENHANCEMENT ================= */
