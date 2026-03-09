@@ -152,6 +152,21 @@ p {
   line-height: 1.6;
 }
 
+.maintenance-left h1 {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  margin-top: -35px;
+  margin-bottom: 14px;
+
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #4a6fa5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    
+}
+
 /* ================= BUTTON ================= */
 .link-btn {
   display: inline-block;
@@ -427,22 +442,11 @@ p {
     order: 1;
     flex: 1;
     padding: 80px;
+    font-size: 44px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 18px;
-  }
-
-  .maintenance-left h1 {
-    font-size: 44px;
-    font-weight: 700;
-    letter-spacing: -1px;
-    line-height: 1.2;
-
-    background: linear-gradient(135deg, #1e3c72, #2a5298, #4a6fa5);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   .maintenance-left p {
@@ -450,6 +454,7 @@ p {
     font-size: 16px;
     color: #555;
     line-height: 1.7;
+    margin-top: 6px;
   }
 
   .maintenance-right {
@@ -482,4 +487,23 @@ p {
     font-size: 32px;
   }
   
+}
+
+@media (max-width: 991px) {
+  .maintenance-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .maintenance-left {
+    order: 2;
+    padding: 40px 25px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .maintenance-right {
+    order: 1;
+    min-height: 300px;
+  }
 }
