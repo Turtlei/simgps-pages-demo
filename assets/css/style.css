@@ -157,14 +157,31 @@ p {
   font-weight: 700;
   letter-spacing: -1px;
   line-height: 1.2;
-  margin-top: -35px;
-  margin-bottom: 14px;
+  margin-top: -10px;
+  margin-bottom: 16px;
 
   background: linear-gradient(135deg, #1e3c72, #2a5298, #4a6fa5);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
     
+}
+
+.maintenance-left p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 400px) {
+  .maintenance-left h1 {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+
+  .maintenance-left p {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
 }
 
 /* ================= BUTTON ================= */
@@ -323,12 +340,13 @@ p {
 .maintenance-left {
   order: 2;
   flex: 1;
-  padding: 60px;
+  padding: 40px 60px 60px 60px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   background: #f4f6f9;
+  gap: 12px;
 }
 
 /* RIGHT SIDE */
