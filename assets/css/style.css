@@ -330,41 +330,6 @@ p {
   }
 }
 
-/* ===== MAIN SPLIT ===== */
-.maintenance-container {
-  display: flex;
-  min-height: 100vh;
-}
-
-/* LEFT SIDE */
-.maintenance-left {
-  order: 2;
-  flex: 1;
-  padding: 40px 60px 60px 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  background: #f4f6f9;
-  gap: 12px;
-}
-
-/* RIGHT SIDE */
-.maintenance-right {
-  order: 1;
-  flex: 1;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background: 
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url("https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1600&q=80");
-  background-size: cover;
-  background-position: center;
-}
-
 /* ================= NOTIFY FORM ================= */
 
 .notify-form {
@@ -415,11 +380,12 @@ p {
 .stay-touch p {
   font-size: 14px;
   color: #666;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .social-links {
   display: flex;
+  justify-content: center;
   gap: 14px;
 }
 
@@ -450,38 +416,6 @@ p {
 /* ================= DESKTOP ENHANCEMENT ================= */
 
 @media (min-width: 992px) {
-  .maintenance-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 100vh;
-  }
-
-  .maintenance-left {
-    order: 1;
-    flex: 1;
-    padding: 80px;
-    font-size: 44px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 18px;
-  }
-
-  .maintenance-left p {
-    max-width: 420px;
-    font-size: 16px;
-    color: #555;
-    line-height: 1.7;
-    margin-top: 6px;
-  }
-
-  .maintenance-right {
-    min-height: 400px;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
   .page-card {
     max-width: 700px;
@@ -505,23 +439,4 @@ p {
     font-size: 32px;
   }
   
-}
-
-@media (max-width: 991px) {
-  .maintenance-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .maintenance-left {
-    order: 2;
-    padding: 40px 25px;
-    align-items: center;
-    text-align: center;
-  }
-
-  .maintenance-right {
-    order: 1;
-    min-height: 300px;
-  }
 }
