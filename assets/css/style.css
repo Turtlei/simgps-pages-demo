@@ -138,26 +138,21 @@ html, body {
 
 /* ================= LOGO ================= */
 .coming-logo {
-  font-size: 36px;
-  
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 6px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
-
 .coming-logo i {
-  margin-bottom: 10px;
   font-size: 36px;
   transition: transform 0.3s ease;
 }
 
-.coming-logo i:hover {
-  animation: pulse 1s infinite;
-}
-
+/* Pulse effect hanya untuk device yang support hover */
 @media (hover:hover) and (pointer:fine) {
   .coming-logo i:hover {
     animation: pulse 1s infinite;
@@ -178,13 +173,22 @@ html, body {
 
 .coming-logo .logo {
   width: 80px;
+  height: auto;
   margin: auto;
+}
+
+.coming-logo .logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
 
 .coming-logo .logo-text h1 {
   font-size: 28px;
   font-weight: 700;
   margin: 0;
+  color: #243b55;
 }
 
 .coming-logo .logo-text p {
@@ -192,8 +196,24 @@ html, body {
   margin: 0;
 }
 
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 480px) {
+  .coming-logo i {
+    font-size: 28px;
+  }
 
-/* ================= TYPOGRAPHY ================= */
+  .coming-logo .logo {
+    width: 60px;
+  }
+
+  .coming-logo .logo-text h1 {
+    font-size: 22px;
+  }
+
+  .coming-logo .logo-text p {
+    font-size: 12px;
+  }
+}/* ================= TYPOGRAPHY ================= */
 h1 {
   font-size: 44px;
   font-weight: 700;
