@@ -40,9 +40,12 @@ body {
 }
 
 .top-logo {
+  font-size: 46px;
+  color: #980002;
   display: flex;
-  justify-content: center;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
   margin-bottom: 20px;
 }
 

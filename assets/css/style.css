@@ -136,6 +136,63 @@ html, body {
     margin-top: 12px;
 }
 
+/* ================= LOGO ================= */
+.coming-logo {
+  font-size: 36px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+
+.coming-logo i {
+  margin-bottom: 10px;
+  font-size: 36px;
+  transition: transform 0.3s ease;
+}
+
+.coming-logo i:hover {
+  animation: pulse 1s infinite;
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .coming-logo i:hover {
+    animation: pulse 1s infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.coming-logo .logo {
+  width: 80px;
+  margin: auto;
+}
+
+.coming-logo .logo-text h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.coming-logo .logo-text p {
+  font-size: 14px;
+  margin: 0;
+}
+
+
 /* ================= TYPOGRAPHY ================= */
 h1 {
   font-size: 44px;
