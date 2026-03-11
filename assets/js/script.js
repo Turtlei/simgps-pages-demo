@@ -99,12 +99,18 @@ if (bg) {
       `calc(50% + ${moveX}px) calc(50% + ${moveY}px)`;
   }
 
-  // Desktop mouse
+  /* ==============================
+   DESKTOP MOUSE
+  ============================== */
+
   document.addEventListener("mousemove", (e) => {
     moveBackground(e.clientX, e.clientY);
   });
 
-  // Mobile touch
+  /* ==============================
+   MOBILE TOUCH
+  ============================== */
+  
   document.addEventListener("touchmove", (e) => {
     const touch = e.touches[0];
     moveBackground(touch.clientX, touch.clientY);
